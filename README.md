@@ -1,12 +1,19 @@
 # cMonkey2-docker
 Setting up cMonkey2 can give you monkey brain, use this docker file instead.
 
+# Intro
+cMonkey is a biclustering algorithm designed to identify co-regulated genes; biclusting refers to the goal of identifying coregulated genes (features) conditioned on experimental or environmental variables (variables). This leads to clusters of both features and conditions, rows and columns of the data matrix.  This can be applied to any data type where correlation of features and variables is of interest. 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4513845/
+https://github.com/baliga-lab/cmonkey2/
+
+
 # Setup
 1. Install Docker if not already installed.
 2. Clone this github repo.
 3. Prepare RSAT files and place them in the same directory.
 4. Prepare protein network files if appropriate and put them in the same directory.
-5. Place the data file, probably a gene response file, possibly expression ratios, or zscores, in the same directory.
+5. Place the data file (a tab separated file), probably a gene response file, possibly expression ratios, or zscores, in the same directory.
+6. Update the path to the data file (dataFile) in run_cmonkey.sh
 
 # Running cMonkey2
 ## Start docker and build the docker image
