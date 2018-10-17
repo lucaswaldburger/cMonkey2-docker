@@ -3,7 +3,7 @@ Setting up cMonkey2 can give you monkey brain, use this docker file instead.
 
 # Intro
 cMonkey is a biclustering algorithm designed to identify co-regulated genes; biclusting refers to the goal of identifying coregulated genes (features) conditioned on experimental or environmental variables (variables). This leads to clusters of both features and conditions, rows and columns of the data matrix.  This can be applied to any data type where correlation of features and variables is of interest.  
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4513845/
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4513845/  
 https://github.com/baliga-lab/cmonkey2/
 
 
