@@ -45,6 +45,6 @@ RUN pip3 install cmonkey2
 RUN apt-get install git -y
 RUN git clone https://github.com/baliga-lab/cmonkey2 /home/cmonkey2
 
-# ## Begin cmonkey run
+## Begin cmonkey run
 WORKDIR /home/cmonkey2
-CMD /bin/bash /home/data/run_cmonkey_run3.sh
+CMD /bin/bash /home/data/run_cmonkey.sh
