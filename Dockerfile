@@ -2,9 +2,9 @@
 #docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}") 
 #to remove all used images
 
-FROM ubuntu
+FROM ubuntu:18.04
 
-RUN apt-get update
+RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:deadsnakes/ppa && apt-get update
 ## Install python
 RUN apt-get install software-properties-common -y && \
     #apt-get install python2.7 libpython2.7 -y && \
@@ -25,8 +25,8 @@ RUN apt-get update && apt-get install -y -q r-base
 RUN apt-get install -y -q r-base-dev
 
 ## Install MEME
-RUN apt-get install curl -y
-RUN curl http://meme-suite.org/meme-software/4.11.3/meme_4.11.3_1.tar.gz meme_4.11.3_1.tar.gz | tar zx
+RUN apt-get install curl wget -y
+RUN wget http://meme-suite.org/meme-software/4.11.3/meme_4.11.3_1.tar.gz && tar zxf meme_4.11.3_1.tar.gz
 RUN cd meme_4.11.3 && \
      ./configure --prefix=$HOME/meme \
         --with-url=http://meme-suite.org \
