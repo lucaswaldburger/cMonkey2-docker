@@ -21,11 +21,17 @@ https://github.com/baliga-lab/cmonkey2/
 ## Start docker and build the docker image
 Note: On AWS linux running centos sudo is required to issue docker commands.
 
-sudo systemctl start docker
+Make sure docker is running
+```
+sudo systemctl status docker
+sudo systemctl start docker # if necessary
+```
 
-change directories to the repo
-
+Change directories to the repo and build docker image
+```
+cd cMonkey2-docker
 sudo docker build -t cmonkey:0.1 -f Dockerfile .
+```
 
 ## Start docker container and auto run cMonkey2
 The following command can be issued inside a screen window to facilitate also calling another instance for monitoring.  Alternatively the -d option could be used to run in detached mode.
