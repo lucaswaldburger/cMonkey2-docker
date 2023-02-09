@@ -22,7 +22,9 @@ https://github.com/baliga-lab/cmonkey2/
 Note: On AWS linux running centos sudo is required to issue docker commands.
 
 sudo systemctl start docker
+
 change directories to the repo
+
 sudo docker build -t cmonkey:0.1 -f Dockerfile .
 
 ## Start docker container and auto run cMonkey2
