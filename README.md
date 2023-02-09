@@ -1,5 +1,5 @@
 # cMonkey2-docker
-Setting up cMonkey2 can give you monkey brain, use this docker file instead.
+cMonkey with docker that actually works
 
 # Intro
 cMonkey is a biclustering algorithm designed to identify co-regulated genes; biclusting refers to the goal of identifying coregulated genes (features) conditioned on experimental or environmental variables (variables). This leads to clusters of both features and conditions, rows and columns of the data matrix.  This can be applied to any data type where correlation of features and variables is of interest.  
@@ -22,8 +22,8 @@ https://github.com/baliga-lab/cmonkey2/
 Note: On AWS linux running centos sudo is required to issue docker commands.
 
 sudo systemctl start docker
-
-sudo docker build -t cmonkey:0.1 -f Dockerfile context
+change directories to the repo
+sudo docker build -t cmonkey:0.1 -f Dockerfile .
 
 ## Start docker container and auto run cMonkey2
 The following command can be issued inside a screen window to facilitate also calling another instance for monitoring.  Alternatively the -d option could be used to run in detached mode.
